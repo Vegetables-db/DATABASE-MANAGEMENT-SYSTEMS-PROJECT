@@ -1,0 +1,2 @@
+select student_id,first_name,last_name,DECODE(upper(speciality), 'CSS','Computer Software And Science','BS','Business School','MNG','Management and Law','EDU','Education and Humanities','IS','Information Systems') speciality,
+   round((sysdate-apply_date)+1) Course,to_char(apply_date,'fmddth  "of" month,yyyy') "Date Applied",nvl (club,'not involved') "Club" from students;
